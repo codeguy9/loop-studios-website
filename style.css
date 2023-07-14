@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    
+}
+
+
+html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+li {
+    list-style-type: none;
+}
+
+  /* Set core body defaults */
+  body {
+    
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: Alata, sans-serif;
+    margin:0;
+    padding:0;
+    
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a {
+    text-decoration: auto;
+  }
+  
+  /* Make images easier to work with */
+  
+  
+  /* Inherit fonts for inputs and buttons */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+
+
+.hero-section {
+    background-image: url(images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    
+    
+}
+
+.container {
+    width: 1440px;
+    margin: auto;
+    
+}
+
+.toggle-btn {
+    display: none;
+}
+
+.side-menu {
+    position: fixed;
+    right: 0;
+    z-index: 3;
+    width: 600px;
+    height: 1200px;
+    background: rgba(58, 144, 214, .6);
+    transform: translateX(100%);
+    transition: all .3s;
+
+    & .close-btn {
+        position: absolute;
+        right: 10px;
+        font-size: 3rem;
+    }    
+    
+}
+
+.side-links {
+    text-align: center;
+    
+
+    & li {
+        font-size: 4rem;
+        
+    }
+
+    & a {
+        color: white;
+    }
+
+
+}
+
+.open-side-links {
+    transform: translateX(0);
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem;
+
+    & ul {
+        display: flex;
+        gap: 2rem;
+
+        & li a {
+            color: white;
+
+           
+        }
+    }
+}
+
+.links {
+    position: relative;
+}
+
+.links .line {
+    width: 20px;
+    height: 3px;
+    background: white;
+    opacity: 0;
+    position: absolute;
+    transition: all .2s;
+    bottom: -10px;
+    left: 13px;
+    
+}
+
+.links li:nth-child(1):hover ~ .line {
+   
+      transition: all .2s;
+      opacity: 1;
+}
+
+.links li:nth-child(2):hover ~ .line {
+    transform: translateX(86px);
+    transition: all .2s;
+    opacity: 1;
+}
+
+.links li:nth-child(3):hover ~ .line {
+    transform: translateX(167px);
+    transition: all .2s;
+    opacity: 1;
+}
+
+.links li:nth-child(4):hover ~ .line {
+    transform: translateX(256px);
+    transition: all .2s;
+    opacity: 1;
+}
+
+.links li:nth-child(5):hover ~ .line {
+    transform: translateX(340px);
+    transition: all .2s;
+    opacity: 1;
+}
+
+.hero-title h1 {
+    color: white;
+    font-size: 6rem;
+    font-family: Josefin Sans;
+    width: 46rem;
+    border: 3px solid white;
+    padding: 2rem 3rem 2rem 2rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 6rem;
+}
+
+.reclama-section {
+    padding: 10rem 2rem;
+}
+
+.ambele-parti {
+    display: flex;
+    position: relative;
+    
+    &   .reclama-section-titles {
+        width: 500px;
+        padding: 7rem;
+        position: absolute;
+        background: white;
+        left: 40rem;
+        top: 12rem;
+
+        & h2 {
+            font-family: Josefin Sans;
+            font-size: 4rem;
+            line-height: 1;
+            padding-bottom: 2rem;
+
+        }
+
+        & p {
+            font-family: Alata;
+            
+        }
+    }
+    
+
+
+}
+
+
+.grid-titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3rem;
+    font-family: Josefin Sans;
+
+    & h3 {
+        text-transform: uppercase;
+        font-size: 2rem;
+
+    }
+
+    & a {
+        font-size: 1.4rem;
+        background: transparent;
+        border: 1px solid black;
+        padding: .3rem 2.5rem;
+    }
+}
+
+
+.grid-section {
+    padding: 5rem 0;
+}
+
+.grid-images {
+    display: grid;
+    grid-template-rows: repeat(2, 500px);
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1.5rem;
+
+}
+
+.image {
+    position: relative;
+
+    & span {
+        position: absolute;
+        z-index: 2;
+        left: 1rem;
+        top: 25rem;
+        font-size: 1.4rem;
+        color: white;
+        text-transform: uppercase;
+        font-family: Josefin Sans;
+
+    }
+
+}
+
+footer {
+    background: black;
+    
+}
+
+.partea-stanga {
+    padding: 3rem 0;  
+    
+    & .logo-img {
+        padding-bottom: 3rem;
+    }
+
+    & ul {
+        display: flex;
+        gap: 2rem;
+        
+        & li a {
+            color: white;
+        }
+    }
+}
+
+.partea-dreapta {
+    padding: 3rem 0;
+}
+
+
+.social {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 3rem;
+
+    & .fa-brands {
+        color: white;
+        font-size: 2rem;
+    }
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.copy span {
+    color: white;
+    
+}
+
+
+
+
+
+@media screen and (max-width: 650px) {
+    .toggle-btn {
+        display: block;
+        font-size: 6rem;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .ambele-parti {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        
+        & .reclama-section-titles {
+            width: 500px;
+            padding: 7rem;
+            
+            background: white;
+            
+    
+            & h2 {
+                font-family: Josefin Sans;
+                font-size: 4rem;
+                line-height: 1;
+                padding-bottom: 2rem;
+    
+            }
+    
+            & p {
+                font-family: Alata;
+                
+            }
+        }
+        
+    
+    
+    }
+
+   
+}
+
+@media screen and (max-width: 470px) {
+    .grid-images {
+        display: grid;
+        grid-template-rows: repeat(3, 500px);
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 1.5rem;
+    
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .grid-images {
+        display: grid;
+        grid-template-rows: repeat(4, 500px);
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1.5rem;
+    
+    }
+
+    footer {
+        background: black;
+        width: 100%;   
+    }
+}
